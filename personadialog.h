@@ -1,7 +1,9 @@
 #ifndef PERSONADIALOG_H
 #define PERSONADIALOG_H
-
 #include <QDialog>
+#include <QDebug>
+
+#include "persona.h"
 
 namespace Ui {
 class PersonaDialog;
@@ -15,10 +17,8 @@ public:
     explicit PersonaDialog(QWidget *parent = nullptr);
     ~PersonaDialog();
 
-    QString nombre();
-    QString apellido();
-    QString telefono();
-    QString email();
+    Persona *persona() const;
+
 private slots:
     void on_buttonBox_accepted();
 
@@ -26,6 +26,7 @@ private slots:
 
 private:
     Ui::PersonaDialog *ui;
+    Persona *m_persona;
 };
 
 #endif // PERSONADIALOG_H

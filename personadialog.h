@@ -2,6 +2,7 @@
 #define PERSONADIALOG_H
 #include <QDialog>
 #include <QDebug>
+#include <QMessageBox>
 
 #include "persona.h"
 
